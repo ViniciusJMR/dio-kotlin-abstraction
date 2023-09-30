@@ -1,0 +1,1 @@
+enum class Level { BASIC, INTERMEDIARY, ADVANCED }
