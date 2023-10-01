@@ -3,6 +3,6 @@ sealed class Content(
 ) {
     data class Video(override val name: String, val url: String): Content(name)
     data class Document(override val name: String, val text: String): Content(name)
-    data class Test(override val name: String, val questions: List<Question>): Content(name)
+    data class Test<K, V>(override val name: String, val questions: List<Question<K, V>>): Content(name)
 }
 

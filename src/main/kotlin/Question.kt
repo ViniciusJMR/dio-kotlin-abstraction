@@ -1,5 +1,7 @@
-data class Question(
+data class Question<K, V>(
     val statement: String,
-    val correct: Int,
-    val alternatives: List<String>
-)
+    val correct: K,
+    val alternatives: Map<K, V>
+) {
+
+}
