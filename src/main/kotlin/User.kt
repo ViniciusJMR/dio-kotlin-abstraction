@@ -18,4 +18,13 @@ data class User(
         formations.removeIf { it.formation == formation }
     }
 
+    override fun toString() = """
+        
+        name: $name
+        formations:
+            $formations
+            
+    """.trimIndent()
+
+
 }

@@ -9,4 +9,17 @@ data class UserFormation(
     fun completeFormation() {
         complete = true
     }
+
+    private fun contentToString() = formation.contents.map{"${"-".repeat(30)}\n${it}\n"}
+
+    override fun toString() = """
+        
+        name: ${formation.name}
+        level: ${formation.level}
+        duration ${formation.totalDuration}
+        complete: $complete
+        contents: 
+            ${contentToString()}
+            
+    """.trimIndent()
 }

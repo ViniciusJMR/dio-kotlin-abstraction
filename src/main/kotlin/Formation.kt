@@ -1,7 +1,7 @@
 import java.time.LocalDate
 
 data class Formation(
-    val nome: String,
+    val name: String,
     val level: Level,
     var dueDate: LocalDate,
     val contents: MutableList<EducationalContent> = mutableListOf(),
