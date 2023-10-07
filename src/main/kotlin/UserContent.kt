@@ -6,4 +6,9 @@ class UserContent (
     fun complete(){
         completed = true
     }
+
+    override fun toString() = """
+completed: $completed
+$content
+    """.trimIndent()
 }

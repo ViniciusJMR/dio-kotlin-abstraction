@@ -11,20 +11,13 @@ data class UserFormation(
     }
 
     private fun contentToString() = StringBuilder().let { builder ->
-        formation.contents.forEach { educationalContent ->
-            builder.append("\t${"-".repeat(30)}\n")
-            builder.append("\t${educationalContent}\n")
+        userEducationalContents.forEach { educationalContent ->
+            builder.append("Educational Contents ${"-".repeat(30)}\n")
+            builder.append("${educationalContent}\n")
         }
         builder
     }
 
-//    private fun contentToString() {
-//        val buider = StringBuilder()
-//        formation.contents.forEach {
-//
-//        }
-//        formation.contents.map{"${"-".repeat(30)}\n${it}\n"}
-//    }
 
     override fun toString() = """
 name: ${formation.name}
