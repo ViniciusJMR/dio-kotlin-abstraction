@@ -12,7 +12,7 @@ O desafio é abstrair a plataforma usando Orientação a objeto. O projeto ainda
 - Usar Interface para criar um object "Matriculável", ela teria os contratos "enroll()" e "disenroll".
   >A priore o que está na minha cabeça é a classe User e Formation utilizando 
 - Organizar os arquivos em packages
-- 
+
 # Dio Kotlin Abstraction (English)
 
 This repository was create to complete a challenge on [Digital Innovation One](https://www.dio.me/) plataform. 
