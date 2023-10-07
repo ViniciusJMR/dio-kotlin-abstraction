@@ -50,7 +50,7 @@ fun main() {
         "Introdução Prática à Linguagem de Programação Kotlin",
         2,
         Level.BASIC,
-        listOf(ecIntroKotlinSection1,)
+        listOf(ecIntroKotlinSection1,ecIntroKotlinSection2)
 
     )
 
@@ -66,7 +66,7 @@ fun main() {
     )
 
     val ecKnowKotlin = EducationalContent(
-        "Code Update TQI - Backend com Kotlin e Java",
+        "Conheça o Kotlin",
         1,
         Level.BASIC,
         listOf(ecsKnowKotlinSection1)
