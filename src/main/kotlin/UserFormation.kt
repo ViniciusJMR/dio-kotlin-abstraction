@@ -10,16 +10,28 @@ data class UserFormation(
         complete = true
     }
 
-    private fun contentToString() = formation.contents.map{"${"-".repeat(30)}\n${it}\n"}
+    private fun contentToString() = StringBuilder().let { builder ->
+        formation.contents.forEach { educationalContent ->
+            builder.append("\t${"-".repeat(30)}\n")
+            builder.append("\t${educationalContent}\n")
+        }
+        builder
+    }
+
+//    private fun contentToString() {
+//        val buider = StringBuilder()
+//        formation.contents.forEach {
+//
+//        }
+//        formation.contents.map{"${"-".repeat(30)}\n${it}\n"}
+//    }
 
     override fun toString() = """
-        
-        name: ${formation.name}
-        level: ${formation.level}
-        duration ${formation.totalDuration}
-        complete: $complete
-        contents: 
-            ${contentToString()}
-            
-    """.trimIndent()
+name: ${formation.name}
+level: ${formation.level}
+duration: ${formation.totalDuration}
+complete: $complete
+contents: 
+${contentToString()}
+""".trimIndent()
 }

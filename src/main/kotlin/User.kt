@@ -18,12 +18,18 @@ data class User(
         formations.removeIf { it.formation == formation }
     }
 
+    private fun formationToString() = StringBuilder().let { builder ->
+        formations.forEach { formation ->
+            builder.append("${"-".repeat(30)}\n")
+            builder.append("${formation}\n")
+        }
+        builder
+    }
+
     override fun toString() = """
-        
-        name: $name
-        formations:
-            $formations
-            
+name: $name
+formations:
+${formationToString()}
     """.trimIndent()
 
 
