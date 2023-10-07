@@ -75,10 +75,9 @@ fun main() {
     val f1 = Formation(
         "Code Update TQI - Backend com Kotlin e Java",
         Level.INTERMEDIARY,
-        LocalDate.of(2023,Month.NOVEMBER, 29)
+        LocalDate.of(2023,Month.NOVEMBER, 29),
+        listOf(ecKnowKotlin, ecIntroKotlin).toMutableList()
         )
-
-    f1.contents.addAll(listOf(ecKnowKotlin, ecIntroKotlin))
 
     val u1 = User("Joao")
     val u2 = User("Maria")
@@ -89,12 +88,5 @@ fun main() {
     u2.enroll(f1)
     f1.enroll(u2)
 
-    print("""
-        $f1
-        ${"*".repeat(10)}
-        $u1
-        ${"*".repeat(10)}
-        $u2        
-        ${"*".repeat(10)}
-    """.trimIndent())
+    println(u1)
 }
